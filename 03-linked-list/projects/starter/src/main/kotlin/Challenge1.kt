@@ -1,9 +1,8 @@
-
-fun <t : Any> LinkedList<t>.printInReverse() {
+fun <T : Any> LinkedList<T>.printInReverse() {
     this.nodeAt(0)?.printInReverse()
 }
 
-fun <t : Any> Node<t>.printInReverse() {
+fun <T : Any> Node<T>.printInReverse() {
     next?.printInReverse()
     if (next != null) {
         print(" <- ")

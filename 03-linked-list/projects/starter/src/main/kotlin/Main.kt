@@ -162,8 +162,8 @@ fun main() {
         }
     }
 
-    "print in reverse" example{
-        val list:LinkedList<Int> = LinkedList()
+    "print in reverse" example {
+        val list: LinkedList<Int> = LinkedList()
         list.add(3)
         list.add(2)
         list.add(1)
@@ -172,5 +172,17 @@ fun main() {
 
         println(list)
         list.printInReverse()
+    }
+
+    "print middle" example {
+        val list = LinkedList<Int>()
+        list.add(3)
+        list.add(2)
+        list.add(1)
+        list.add(4)
+        list.add(5)
+
+        println(list)
+        println(list.getMiddle()?.value)
     }
 }
