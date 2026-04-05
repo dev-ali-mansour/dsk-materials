@@ -1,4 +1,4 @@
-class LinkedList<T : Any> :Iterable<T>, Collection<T>, MutableIterable<T>, MutableCollection<T>{
+class LinkedList<T : Any> : Iterable<T>, Collection<T>, MutableIterable<T>, MutableCollection<T> {
     private var head: Node<T>? = null
     private var tail: Node<T>? = null
     override var size = 0
@@ -172,6 +172,4 @@ class LinkedList<T : Any> :Iterable<T>, Collection<T>, MutableIterable<T>, Mutab
         tail = null
         size = 0
     }
-
-
 }
