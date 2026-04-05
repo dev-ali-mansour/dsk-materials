@@ -197,4 +197,24 @@ fun main() {
         println("Original: $list")
         println("Reversed: ${list.reversed()}")
     }
+
+    "merge lists" example {
+        val list = LinkedList<Int>()
+        list.add(1)
+        list.add(2)
+        list.add(3)
+        list.add(4)
+        list.add(5)
+
+        val other = LinkedList<Int>()
+        other.add(-1)
+        other.add(0)
+        other.add(2)
+        other.add(2)
+        other.add(7)
+
+        println("Left: $list")
+        println("Right: $other")
+        println("Merged:${list.mergeSorted(other)}")
+    }
 }
