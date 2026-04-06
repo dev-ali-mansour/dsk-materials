@@ -1,3 +1,6 @@
+import stack.StackImpl
+import stack.stackOf
+
 /*
  * Copyright (c) 2021 Razeware LLC
  *
@@ -29,5 +32,31 @@
  */
 
 fun main() {
+    "using a tack" example {
+        val stack = StackImpl<Int>()
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        stack.push(4)
 
+        print(stack)
+        val poppedElement = stack.pop()
+        poppedElement?.let {
+            println("Popped:$it")
+        }
+        print(stack)
+    }
+
+    "initalizing a stack from a list" example {
+        val list = listOf("A", "B", "C", "D")
+        val stack = StackImpl.create(list)
+        print(stack)
+        println("Popped: ${stack.pop()}")
+    }
+
+    "initializing a stack from an array literal" example {
+        val stack = stackOf(1.0, 2.0, 3.0, 4.0)
+        print(stack)
+        println("Popped: ${stack.pop()}")
+    }
 }
